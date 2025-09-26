@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+      body{
+        font-family:Arial,sans-serif ;
+        text-align: center;
+      }
+     .circle {
+  width: 100px;
+  height: 100px;
+  background-color: #4CAF50;
+  border-radius: 15%;
+  margin: 10px auto;
+  transition: transform 3s all ease;
+  display: flex;
+  justify-content: center;
+      }
+     .circle:hover{
+      transform: rotate(45deg);
+      background-color: aqua;
+     }
+
+       /* Scale on hover */
+           .scale-box {
+            margin: 10px auto;
+            width: 100px;
+            height: 100px;
+            background-color: #00a1a1;
+            border-radius: 50px;
+            transition: transform 0.3s ease-in-out; 
+        }
+
+        .scale-box:hover{
+            transform: scale(1.2);
+          }
+
+          /* Transition on translate */
+
+        .translate-box {
+            margin: 10px auto;
+            width: 100px;
+            height: 100px;
+            background-color: #e74c3c;
+            border-radius: 10px;
+            transition: transform 0.5s ease-in-out; 
+        }
+
+        .translate-box:hover {
+            transform: translate(100px, 50px); 
+        }
+
+          /* Transition on skew */
+        
+        .skew-box {
+          margin: 10px auto;
+            width: 100px;
+            height: 100px;
+            background-color: #9b59b6;
+            border-radius: 10px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .skew-box:hover {
+            transform: skew(20deg, 10deg); 
+        }
+
+        .underline{
+            text-decoration: none;
+            position: relative;
+            margin-left: 120px;
+            margin-top: 100px;
+            background: none;
+            outline: none;
+            border: none;
+            font-weight: 700;
+            font-size: 30px;
+            font-family: "poppins", sans-serif;
+        }
+
+        .underline::after{
+            content: "";
+            position: absolute;
+            height: 4px;
+            background: #000;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            transition: 0.4s;
+        }
+
+        .underline:hover::after{
+            width: 100%;
+        }
+
+     
+.wavy-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  color: white;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.wavy-button:hover {
+  transform: scale(1.1) rotate(-2deg);
+}
+
+.morph-box {
+  margin: 10px auto;
+  margin-top: 50px;
+  width:100px;
+  height: 100px;
+  background-color: #00c9a7;
+  border-radius: 50%;
+  transition: all 0.6s ease-in-out;
+}
+
+.morph-box:hover {
+  border-radius: 10px;
+  transform: rotate(45deg) scale(1.2);
+  background-color: #ff6f61;
+}
+
+.glow-card {
+  margin: 10px auto;
+  margin-top: 50px;
+  width: 250px;
+  height: 150px;
+  background: #222;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.glow-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.4);
+}
+
+.spin-icon {
+    margin: 20px;
+  font-size: 50px;
+  transition: transform 0.5s ease;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.spin-icon:hover {
+  transform: rotate(360deg);
+}
+
+.reveal-box {
+  margin: 10px auto;
+  overflow: hidden;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+  cursor: pointer;
+}
+
+.text {
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.reveal-box:hover .text {
+  transform: translateY(0);
+}
+        
+    </style>
+</head>
+<body>
+    
+    <h1>CSS Animation</h1>
+
+            <!-- rotate-box -->
+        <h2>Rotate Box</h2>
+       <div class="circle"></div>
+
+       <!-- /* Scale on hover */ -->
+        <h2> Scale effect on hover </h2>
+          <div class="scale-box"></div>
+
+          <!-- Transition on translate -->
+           <h2>Transition on translate</h2>
+            <div class="translate-box"></div>
+
+            <!-- Transition on skew  -->
+             <h2>Transition on skew</h2>
+             <div class="skew-box"></div>
+
+        <button class="underline">CSS ASSIGMENT!</button>
+<br>
+<br>
+<button class="wavy-button">Hover Me</button>
+<div class="morph-box"></div>
+
+<div class="glow-card">
+  <h3>Glow Up</h3>
+</div>
+
+<div class="spin-icon">🔄</div>
+
+<div class="reveal-box">
+  <span class="text">Surprise!</span>
+</div>
+</body>
+</html>
